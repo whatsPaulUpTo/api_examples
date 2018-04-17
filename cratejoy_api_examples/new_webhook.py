@@ -47,23 +47,23 @@ if __name__ == '__main__':
 
     parser = ArgumentParser()
 
-    parser.new_argument(u'--user',
+    parser.add_argument(u'--user',
                         type=unicode,
                         required=True, help=u'Basic auth user')
-    parser.new_argument(u'--pw',
+    parser.add_argument(u'--pw',
                         type=unicode,
                         required=True, help=u'Basic auth password')
-    parser.new_argument(u'--event',
+    parser.add_argument(u'--event',
                         type=unicode,
                         required=True,
                         help=u'(string): name of a cratejoy event that will trigger this hook')
-    parser.new_argument(u'--target',
+    parser.add_argument(u'--target',
                         type=unicode,
                         help=u'(string): the target URI of your endpoint')
-    parser.new_argument(u'--request_type',
+    parser.add_argument(u'--request_type',
                         type=unicode,
                         help=u'(string): either POST or GET', default='POST')
-    parser.new_argument(u'--name',
+    parser.add_argument(u'--name',
                         type=unicode,
                         help=u'name of the new webhook')
 
